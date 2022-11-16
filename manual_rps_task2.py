@@ -1,17 +1,23 @@
 import random
 class Rps:
+    def __init__(self,computer,user):
+        self.computer = computer
+        self.user = user
      #Computer choice
-    #def get_computer_choice():
+    def get_computer_choice():
         List_1 = ['rock', 'paper', 'scissor']
         computer = random.choice(List_1)
         print(computer)
+    get_computer_choice()
       # Player choice
-    #def get_user_choice():
+    def get_user_choice():
         user = input('User ''write your choice: ')
         list_2 = ['rock', 'paper', 'scissor']
         print(user)
+    get_user_choice()
     
-    #def get_winner(computer,user):
+    def get_winner(computer,user):
+        
         while computer == user:
             print('It is a Tie.')
             break
@@ -29,4 +35,5 @@ class Rps:
             else:
                 computer == 'paper' and user == 'scissor'
                 print('User Wins')
-            
+    get_winner('computer','user')
+    
